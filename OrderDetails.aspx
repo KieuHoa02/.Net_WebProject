@@ -121,7 +121,7 @@
     <form id="form1" runat="server">
         <h2>MENU ITEMS</h2>
 
-        <asp:GridView ID="GridView1" runat="server" CssClass="gridview-style" AutoGenerateColumns="False">
+        <asp:GridView ID="GridView1" runat="server" CssClass="gridview-style" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="ItemID" HeaderText="ID" />
                 <asp:BoundField DataField="Name" HeaderText="Name" />
