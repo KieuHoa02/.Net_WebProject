@@ -94,34 +94,13 @@
         .btn-toggle-order:hover {
             background-color: #8E44AD;
         }
-        .btn-action {
-        background-color: #6A1B9A;
-        color: white;
-        font-size: 16px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 20px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .btn-action:hover {
-        background-color: #8E44AD;
-        transform: scale(1.05); /* Thêm hiệu ứng phóng to khi hover */
-    }
-
-    .btn-action:active {
-        transform: scale(0.98); /* Thêm hiệu ứng thu nhỏ khi click */
-    }
-
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <h2>MENU ITEMS</h2>
 
-        <asp:GridView ID="GridView1" runat="server" CssClass="gridview-style" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" CssClass="gridview-style" AutoGenerateColumns="False">
             <Columns>
                 <asp:BoundField DataField="ItemID" HeaderText="ID" />
                 <asp:BoundField DataField="Name" HeaderText="Name" />
