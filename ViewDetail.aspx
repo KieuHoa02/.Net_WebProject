@@ -10,31 +10,31 @@
     <form id="form1" runat="server">
         <div class="container mt-5">
             <div class="card shadow p-4">
-                <h2 class="text-center text-primary">Thông tin món ăn</h2>
+                <h2 class="text-center text-primary">Dish information</h2>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label class="form-label"><strong>Tên sản phẩm:</strong></label>
+                            <label class="form-label"><strong>Name of dish:</strong></label>
                             <asp:TextBox ID="txtName" runat="server" CssClass="form-control" ReadOnly="true" />
 
                         </div>
                         <div class="mb-3">
-                            <label class="form-label"><strong>Giá:</strong></label>
+                            <label class="form-label"><strong>Price:</strong></label>
                             <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control" ReadOnly="true" />
 
                         </div>
                         <div class="mb-3">
-                            <label class="form-label"><strong>Mô tả:</strong></label>
+                            <label class="form-label"><strong>Describe:</strong></label>
                             <asp:TextBox ID="txtDescription" runat="server" CssClass="form-control" ReadOnly="true" TextMode="MultiLine" />
 
                         </div>
                         <div class="mb-3">
-                            <label class="form-label"><strong>Danh mục:</strong></label>
+                            <label class="form-label"><strong>Category:</strong></label>
                             <asp:TextBox ID="txtCategory" runat="server" CssClass="form-control" ReadOnly="true" />
 
                         </div>
                         <div class="mb-3">
-                            <label class="form-label"><strong>Loại:</strong></label>
+                            <label class="form-label"><strong>Type:</strong></label>
                             <asp:TextBox ID="txtType" runat="server" CssClass="form-control" ReadOnly="true" />
 
                         </div>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="MenuItem.aspx" class="btn btn-secondary">Quay lại</a>
+                    <a href="MenuItem.aspx" class="btn btn-secondary">Back</a>
                 </div>
             </div>
         </div>
