@@ -73,6 +73,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <h2>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="BACK" />
+        </h2>
         <h2>Customer List</h2>
         <div class="grid-container">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="UserID" 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
-
+using WebApplication1;
 namespace WebAplication1
 {
     public partial class Table : System.Web.UI.Page
@@ -271,5 +271,9 @@ namespace WebAplication1
             }
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Reservation.aspx");
+        }
     }
 }

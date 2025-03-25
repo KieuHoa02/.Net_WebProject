@@ -74,6 +74,9 @@
     <form id="form1" runat="server">
         <div class="container">
             <div class="gridview-container">
+                <h2>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="BACK" />
+                </h2>
                 <h2>Quản lý Menu</h2>
 
                 <div class="row mb-3">

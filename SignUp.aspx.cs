@@ -47,11 +47,7 @@ namespace WebApplication1
                     }
                 }
 
-                // Nếu Admin đang đăng nhập, có thể tạo tài khoản Staff
-                if (Session["Role"] != null && Session["Role"].ToString() == "Admin")
-                {
-                    role = "Staff"; // Hoặc có thể cấp quyền khác nếu cần
-                }
+                
 
                 // Chèn dữ liệu vào bảng Users
                 using (SqlCommand insertCmd = new SqlCommand("INSERT INTO Users (Username, Password, Role) VALUES (@Username, @Password, @Role)", clsDatabase.con))
@@ -84,6 +80,17 @@ namespace WebApplication1
             {
                 clsDatabase.CloseConnection();
             }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignIn.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
         }
     }
 }

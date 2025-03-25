@@ -18,8 +18,11 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            color: rgb(145, 17, 165);
+        
+        .KHchinh {
+            text-decoration-color: rgb(145, 17, 165);
+            width: 1181px;
+            align-content: center;
         }
         .gridview {
             width: 100%;
@@ -140,13 +143,56 @@
             color: #888;
             cursor: not-allowed;
         }
+        .custom-button {
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+    }
+
+    /* Hover effect */
+    .custom-button:hover {
+        background: linear-gradient(135deg, #5a7bfc, #9060d4);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Khi nhấn giữ */
+    .custom-button:active {
+        transform: translateY(1px);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Tạo khoảng cách giữa các nút */
+    .button-container {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+    }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Reservation Management</h2>
         <form id="form1" runat="server">
+        <h2>
+            <div class="button-container">
+    <asp:Button ID="TABLE" runat="server" OnClick="TABLE_Click" Text="TABLE" CssClass="custom-button" />
+    <asp:Button ID="USER" runat="server" OnClick="USER_Click" Text="USER" CssClass="custom-button" />
+    <asp:Button ID="MENUITEM" runat="server" OnClick="MENUITEM_Click" Text="MENUITEM" CssClass="custom-button" />
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="LOGOUT" CssClass="custom-button" />
+</div>
+
+            </h2>
+        <div id ="KHchinh"><h2>Reservation Management</h2></div>
             <div class="filter-section">
                 <div class="filter-group">
                     <label for="txtUsername">Customer Name:</label>

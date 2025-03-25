@@ -463,9 +463,9 @@ namespace WebApplication1
             return dt;
         }
 
-
-
-
-
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Reservation.aspx");
+        }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
-
+using WebApplication1;
 namespace WebAplication1
 {
     public partial class Reservation : System.Web.UI.Page
@@ -61,7 +61,7 @@ namespace WebAplication1
                     
                     string query = @"
                         SELECT r.ReservationID, r.UserID, u.Username, r.TableID, r.Status, r.DateTime
-                        FROM Reservation r
+                        FROM Reservations r
                         INNER JOIN Users u ON r.UserID = u.UserID";
 
                     if (conditions.Count > 0)
@@ -170,7 +170,7 @@ namespace WebAplication1
                                 return;
                             }
 
-                            string query = "UPDATE Reservation SET UserID = @UserID, TableID = @TableID, Status = @Status, DateTime = @DateTime WHERE ReservationID = @ReservationID";
+                            string query = "UPDATE Reservations SET UserID = @UserID, TableID = @TableID, Status = @Status, DateTime = @DateTime WHERE ReservationID = @ReservationID";
                             SqlCommand cmd = new SqlCommand(query, clsDatabase.con);
                             cmd.Parameters.AddWithValue("@UserID", ddlUsername.SelectedValue);
                             cmd.Parameters.AddWithValue("@TableID", ddlTableID.SelectedValue);
@@ -204,7 +204,7 @@ namespace WebAplication1
                 try
                 {
                     clsDatabase.OpenConnection();
-                    string query = "DELETE FROM Reservation WHERE ReservationID = @ReservationID";
+                    string query = "DELETE FROM Reservations WHERE ReservationID = @ReservationID";
                     SqlCommand cmd = new SqlCommand(query, clsDatabase.con);
                     cmd.Parameters.AddWithValue("@ReservationID", reservationID);
                     cmd.ExecuteNonQuery();
@@ -221,7 +221,7 @@ namespace WebAplication1
                 try
                 {
                     clsDatabase.OpenConnection();
-                    string query = "UPDATE Reservation SET Status = CASE \r\n    WHEN Status = 0 THEN 1 \r\n    ELSE 0 \r\nEND  WHERE ReservationID = @ReservationID";
+                    string query = "UPDATE Reservations SET Status = CASE \r\n    WHEN Status = 0 THEN 1 \r\n    ELSE 0 \r\nEND  WHERE ReservationID = @ReservationID";
                     SqlCommand cmd = new SqlCommand(query, clsDatabase.con);
                     cmd.Parameters.AddWithValue("@ReservationID", reservationID);
                     cmd.ExecuteNonQuery();
@@ -338,5 +338,26 @@ namespace WebAplication1
             return dt;
         }
 
+        protected void TABLE_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Table.aspx");
+        }
+
+        protected void USER_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerList.aspx");
+        }
+
+        protected void MENUITEM_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MenuItem.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("SignIn.aspx");
+        }
     }
 }

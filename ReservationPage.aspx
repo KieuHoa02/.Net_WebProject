@@ -84,6 +84,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <h2>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Logout" />
+        </h2>
         <h2>Đặt Bàn</h2>
         <p>Xin chào, <asp:Label ID="lblUsername" runat="server" Text=""></asp:Label></p>
 

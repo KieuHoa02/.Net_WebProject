@@ -180,8 +180,11 @@
 </head>
 <body>
     <div class="container">
-        <h2>Table Management</h2>
         <form id="form1" runat="server">
+        <h2>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="BACK" />
+            </h2>
+        <h2>Table Management</h2>
             <div class="filter-section">
                 <div class="filter-group">
                     <label for="txtSeatsFilter">Seats:</label>

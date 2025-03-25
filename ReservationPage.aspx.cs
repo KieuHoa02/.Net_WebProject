@@ -129,5 +129,13 @@ namespace WebApplication1
             }
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+
+            // Chuyển hướng về trang đăng nhập
+            Response.Redirect("SignIn.aspx");
+        }
     }
 }

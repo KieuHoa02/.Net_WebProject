@@ -107,8 +107,8 @@
             <!-- Nút bấm -->
             <div class="button-container">
                 <asp:Button ID="ButtonSignIn" runat="server" Text="OKE" CssClass="aspButton" OnClick="ButtonSignIn_Click" />
-                <asp:Button ID="Button3" runat="server" Text="REGISTER" CssClass="aspButton" />
-                <asp:Button ID="Button4" runat="server" Text="CANCEL" CssClass="aspButton" />
+                <asp:Button ID="Button3" runat="server" Text="REGISTER" CssClass="aspButton" OnClick="ButtonSignIn_Click1"/>
+                <asp:Button ID="Button4" runat="server" Text="CANCEL" CssClass="aspButton" OnClick="ButtonSignIn_Click2"/>
             </div>
         </form>
     </body>

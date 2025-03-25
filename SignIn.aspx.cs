@@ -53,8 +53,12 @@ namespace WebApplication1
                             Session["UserID"] = userID;
                             Session["Username"] = username;
                             Session["Role"] = role;
-
-                            Response.Redirect("ReservationPage.aspx");
+                            if (role == "Staff")
+                            {
+                                Response.Redirect("Reservation.aspx");
+                            }
+                            else
+                            { Response.Redirect("ReservationPage.aspx"); } 
                         }
                         else
                         {
@@ -71,6 +75,14 @@ namespace WebApplication1
             {
                 clsDatabase.CloseConnection();
             }
+        }
+
+        protected void ButtonSignIn_Click1(object sender, EventArgs e)
+        { Response.Redirect("SignUp.aspx"); }
+        protected void ButtonSignIn_Click2(object sender, EventArgs e)
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
         }
     }
 }
