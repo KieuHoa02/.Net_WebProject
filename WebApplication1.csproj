@@ -119,9 +119,10 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="KH.png" />
     <Content Include="MenuItem.aspx" />
     <Content Include="MenuItemDetail.aspx" />
-	  <!--<Content Include="OrderDetails.aspx" />-->
+    <!--<Content Include="OrderDetails.aspx" />-->
     <Content Include="Reservation.aspx" />
     <Content Include="CreateReservation.aspx" />
     <Content Include="Table.aspx" />
@@ -235,7 +236,7 @@
     <Compile Include="CreateReservation.aspx.designer.cs">
       <DependentUpon>CreateReservation.aspx</DependentUpon>
     </Compile>
-	  <!-- 
+    <!-- 
     <Compile Include="OrderDetails.aspx.cs">
       <DependentUpon>OrderDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

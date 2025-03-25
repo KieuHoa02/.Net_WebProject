@@ -92,11 +92,21 @@
             .button-container .aspButton i {
                 margin-right: 8px;
             }
+                    .logo {
+    width: 100%; /* Chiều rộng 100% theo form */
+    max-width: 1000px; /* Giữ ảnh không quá lớn */
+    height: auto; /* Đảm bảo ảnh không bị méo */
+    display: block;
+    margin: 0 auto 15px; /* Canh giữa */
+    border-radius: 10px; /* Bo góc nhẹ */
+    object-fit: contain; /* Hiển thị ảnh đúng tỉ lệ */
+}
         </style>
     </head>
 
     <body>
         <form id="form1" runat="server">
+            <img src="KH.png" alt="Food Paradise Logo" class="logo">
             <p>LOG IN HERE TO ENTER THE FOOD PARADISE</p>
 
             <!-- Username field với icon -->
